@@ -97,6 +97,7 @@
     display: inline-block;
     margin-right: 100px;
     width: 450px;
+    content: flex;
   }
   
   .game-card:hover {
@@ -113,7 +114,11 @@
     padding: 25px;
     font-size: 15px;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
- 
+  
 
   

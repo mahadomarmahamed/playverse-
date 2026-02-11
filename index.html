@@ -24,22 +24,69 @@
     <div class="hero-content">
       <h1>WELCOME TO PLAYVERSE</h1>
       <p>Next generation gaming experiences.</p>
-      <a href="#" class="btn">Utforska Spel</a>
-    </div>
-  </section>
+      <a href="#games" class="btn" id="scrollBtn">Läs mer</a>
+      <script>
+        document.getElementById("scrollBtn").addEventListener("click", function(e) {
+          e.preventDefault();
+        
+          const target = document.getElementById("games");
+          const targetPosition = target.offsetTop;
+          const startPosition = window.pageYOffset;
+          const distance = targetPosition - startPosition;
+          const duration = 1000;
+          let start = null;
+        
+          function animation(currentTime) {
+            if (start === null) start = currentTime;
+            const timeElapsed = currentTime - start;
+            const progress = Math.min(timeElapsed / duration, 1);
+            window.scrollTo(0, startPosition + distance * ease(progress));
+        
+            if (timeElapsed < duration) {
+              requestAnimationFrame(animation);
+            }
+          }
+        
+          function ease(t) {
+            return t < 0.5
+              ? 2 * t * t
+              : -1 + (4 - 2 * t) * t;
+          }
+        
+          requestAnimationFrame(animation);
+        });
+        </script>
+        
 
-  <section class="games">
-    <h2>parry vs god</h2>
+
+      <script>
+        document.querySelector('.btn').addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector('#games').scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+        </script>
+        
+
+
+    </div>
+
+    <img src="c:\Users\mahadmahamed.omar\Pictures\Saved Pictures\9A805ED1-4E72-4956-BE0A-37FAE2A5AF1F.jpg" alt="game image">
+  </section>
+  
+  <section id="games" class="games">
+    <h2>Våre Spel</h2>
 
 
       <div class="game-card">
         <div class="game-image"></div>
-        <h3>streets and heist</h3>
+        <h3>Streets and heist</h3>
       </div>
 
       <div class="game-card">
         <div class="game-image"></div>
-        <h3>Last Horizon</h3>
+        <h3>Parry vs god</h3>
       </div>
     </div>
   </section>
