@@ -87,13 +87,16 @@
   .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 100px;
   }
   
   .game-card {
     background: #111;
     border: 1px solid #222;
     transition: transform 0.3s;
+    display: inline-block;
+    margin-right: 100px;
+    width: 450px;
   }
   
   .game-card:hover {
@@ -101,19 +104,16 @@
   }
   
   .game-image {
-    height: 180px;
+    height: 300px;
     background: #222;
+    width: 450px;
   }
   
   .game-card h3 {
-    padding: 20px;
-    font-size: 18px;
+    padding: 25px;
+    font-size: 15px;
   }
   
-  footer {
-    padding: 30px;
-    text-align: center;
-    color: #666;
-    border-top: 1px solid #111;
-  }
+ 
+
   
