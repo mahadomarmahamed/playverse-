@@ -1,120 +1,156 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  body {
-    background: #000;
-    color: #fff;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #000;
+  border-bottom: 1px solid #111;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #fff;
+}
+
+
+.hero {
+  height: 90vh;
+  background: linear-gradient(to bottom, #000, #111);
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+.games {
+  padding: 80px 60px;
+}
+
+.games h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+
+.game-card {
+  background: #111;
+  border: 1px solid #222;
+  transition: transform 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.game-card:hover {
+  transform: scale(1.03);
+}
+
+.game-image {
+  height: 250px;
+  background: #222;
+  width: 100%; 
+}
+
+.game-card h3 {
+  padding: 20px;
+  font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
 
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background: #000;
-    border-bottom: 1px solid #111;
-  }
-  
-  .logo {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 2px;
-  }
-  
-  .navbar nav a {
-    margin-left: 30px;
-    text-decoration: none;
-    color: #aaa;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  
-  .navbar nav a:hover {
-    color: #fff;
-  }
-  
-  
-  .hero {
-    height: 90vh;
-    background: linear-gradient(to bottom, #000, #111);
-    display: flex;
-    align-items: center;
-    padding: 0 60px;
-  }
-  
-  .hero-content h1 {
-    font-size: 64px;
-    font-weight: 900;
-    margin-bottom: 20px;
-  }
-  
-  .hero-content p {
-    font-size: 18px;
-    color: #bbb;
-    margin-bottom: 30px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s;
-  }
-  
-  .btn:hover {
-    background: #fff;
-    color: #000;
-  }
-  
-  .games {
-    padding: 80px 60px;
-  }
-  
-  .games h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-  
-  .game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 100px;
-  }
-  
-  .game-card {
-    background: #111;
-    border: 1px solid #222;
-    transition: transform 0.3s;
-    display: inline-block;
-    margin-right: 100px;
-    width: 450px;
-    content: flex;
-  }
-  
-  .game-card:hover {
-    transform: scale(1.03);
-  }
-  
-  .game-image {
-    height: 300px;
-    background: #222;
-    width: 450px;
-  }
-  
-  .game-card h3 {
-    padding: 25px;
-    font-size: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
   }
 
-  html {
-    scroll-behavior: smooth;
+  .navbar nav {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
   }
+
+  .hero {
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .games {
+    padding: 60px 20px;
+  }
+
+}
